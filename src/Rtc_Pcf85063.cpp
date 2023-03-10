@@ -1,12 +1,25 @@
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#define byte uint8_t
-#define send( X ) write( static_cast<uint8_t>(X) )
-#define receive( X ) read( X )
-#else
-#include "WProgram.h"
-#endif
+/****
+ *  NAME
+ *    Pcf85063 Real Time Clock support routines
+ *  AUTHOR
+ *    Tales Zanotti
+ *    talleszanotti@gmail.com
+ *    
+ *  CREATION DATE
+ *    10/03/2023,  init - first version  
+ *  NOTES
+ *  HISTORY
+ *    
+ *  TODO
+ *    Add Examples
+ *    Add external clock configs
+ *    Clean up
+ *    
+ *    
+ ******
+*/
 
+#include "WProgram.h"
 #include <Wire.h>
 #include "Rtc_Pcf85063.h"
 
